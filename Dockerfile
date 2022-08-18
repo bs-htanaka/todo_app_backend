@@ -1,4 +1,7 @@
 FROM ruby:2.5
+
+ENV RAILS_ENV=production
+
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 WORKDIR /todo_backend
 COPY Gemfile /todo_backend/Gemfile
