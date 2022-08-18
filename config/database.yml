@@ -83,6 +83,8 @@ test:
 #
 production:
   <<: *default
-  database: todo_backend_production
-  username: todo_backend
+  database: <%= ENV['TODO_BACKEND_DATABASE'] %>
+  username: <%= ENV['TODO_BACKEND_DATABASE_USERNAME'] %>
   password: <%= ENV['TODO_BACKEND_DATABASE_PASSWORD'] %>
+  host: <%= ENV['TODO_BACKEND_DATABASE_HOST'] %>
+
